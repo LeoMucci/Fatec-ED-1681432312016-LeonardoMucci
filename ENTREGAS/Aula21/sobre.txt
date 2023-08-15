@@ -1,0 +1,14 @@
+AtividadeB3-1-Contagem de Instruções
+
+Instruções
+faça a contagem de instruções dos seguintes algoritmos que constam  no anexo.
+
+Importante:
+Para fazer a contagem, considere os critérios de contagem de instruções abordadas em aula (08/08/2023)
+
+Deverá ser criado um arquivo para cada resposta (São 3)
+identifique no arquivo o algoritmo
+Numere cada linha do algoritmo
+Para cada linha, informa a quantidade de instruções
+Informe qual é o total de instruções que o algoritmo poderá fazer
+Para responder a esta tarefa, gravar um arquivo, utilizando a sintaxe   Markdown.
