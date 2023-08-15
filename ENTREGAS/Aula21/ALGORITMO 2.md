@@ -11,7 +11,7 @@
 9 -    devolve -1
 10 - }
 ```
-### Análise de Contagem de Instruções - Algoritmo BuscaLinear
+### Análise de Contagem de Instruções - Algoritmo BuscaLinear em Ordem
 
 **Linha 2 (fora do loop):**
 - Instrução: Inserção de valor
