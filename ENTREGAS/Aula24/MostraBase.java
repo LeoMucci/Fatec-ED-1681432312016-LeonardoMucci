@@ -1,49 +1,35 @@
-package binariointerativo;
+package Aula24;
 
 import javax.swing.JOptionPane;
 
 public class MostraBase {
 
-    private String base;
-    private String num;
-    private int[] resposta;
-
     public static void main(String[] args) {
-        MostraBase mostraBase = new MostraBase();
-        mostraBase.inputBase();
-    }
+        String inputBase = JOptionPane.showInputDialog("Digite a base num√©rica (10, 2, 8 ou 16):");
 
-    public void inputBase() {
-        String input = JOptionPane.showInputDialog("Digite a base numÈrica (10, 2, 8 ou 16):");
-
-        int base = Integer.parseInt(input);
+        int base = Integer.parseInt(inputBase);
 
         if (base == 2 || base == 10 || base == 8 || base == 16) {
-            num = JOptionPane.showInputDialog("Digite o valor inicial:");
-            
-            int numeroInicial = Integer.parseInt(num);
-            int numero = numeroInicial;
-            resposta = new int[100];
-            
-            int index = 0;
-            while (numero > 0) {
-                resposta[index] = numero % base;
-                numero /= base;
-                index++;
-            }
-            
+            String inputValor = JOptionPane.showInputDialog("Digite o valor inicial:");
 
-            
-            StringBuilder resultMessage = new StringBuilder("");
-            for (int i = index - 1; i >= 0; i--) {
-                resultMessage.append(resposta[i]);
+            int valor = Integer.parseInt(inputValor);
+            String mensagemResultado = "Resultado da convers√£o em base " + base + " √©: ";
+
+            if (valor == 0) {
+                mensagemResultado += "0"; 
+            } else {
+                String resultado = "";
+                while (valor > 0) {
+                    int digito = valor % base;
+                    resultado = digito + resultado;
+                    valor /= base;
+                }
+                mensagemResultado += resultado;
             }
-            
-            JOptionPane.showMessageDialog(null,"Resultado da convers„o em base : " + base + "\n" + "È: " + resultMessage.toString());
+
+            JOptionPane.showMessageDialog(null, mensagemResultado);
         } else {
-            JOptionPane.showMessageDialog(null, "Valor de base incorreto");
-            System.exit(base);
+            JOptionPane.showMessageDialog(null, "Base num√©rica incorreta. Use 2, 10, 8 ou 16.");
         }
     }
 }
- 	
